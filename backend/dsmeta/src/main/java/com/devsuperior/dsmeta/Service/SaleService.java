@@ -1,5 +1,5 @@
 package com.devsuperior.dsmeta;
-
+import org.springframework.stereotype.Service;
 import com.devsuperior.dsmeta.Model.SalesModel;
 import com.devsuperior.dsmeta.Repository.SalesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +12,9 @@ import java.time.ZoneId;
 import java.util.List;
 import java.util.Optional;
 
-@org.springframework.stereotype.Service
+@Service
 public class SaleService {
+
 
     @Autowired
     private SalesRepository repository;
@@ -31,6 +32,7 @@ public class SaleService {
 
 
     public Optional<SalesModel> findSalesId(Long  id){
+
         return repository.findById(id);
     }
 }

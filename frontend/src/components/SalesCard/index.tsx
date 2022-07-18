@@ -17,6 +17,8 @@ function SalesCard() {
 
 
     useEffect(() => {
+        const dmin = minDate
+        const dmax = maxDate
 
         axios.get(`${BASE_URL}/api?minDate=${dmin}&maxDate=${dmax}`)
             .then(response => {
